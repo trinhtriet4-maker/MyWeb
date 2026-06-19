@@ -1,29 +1,96 @@
 <!DOCTYPE html>
+
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MyWeb - 1. Gắn CSS ngoài</title>
-  <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ẩm Thực Và Du Lịch Nha Trang</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<header class="site-header" id="top">
-  <div class="brand">MyWeb</div>
-  <nav class="main-nav" aria-label="Điều hướng chính">
-    <a href="#hero">Trang chủ</a>
+
+<header class="site-header">
+    <h1>Ẩm Thực Và Du Lịch Nha Trang</h1>
+
+```
+<nav>
     <a href="#about">Giới thiệu</a>
     <a href="#gallery">Thư viện</a>
     <a href="#contact">Liên hệ</a>
-  </nav>
+</nav>
+```
+
 </header>
 
-<main>
-  <section class="hero" id="hero">
-    <p class="eyebrow">Website cá nhân theo chủ đề tự chọn</p>
-    <h1 id="main-title">Hành trình xây dựng MyWeb</h1>
-    <p class="intro">Thay nội dung này bằng chủ đề cá nhân của em: du lịch, ẩm thực, âm nhạc, thể thao, công nghệ, học tập hoặc một sở thích riêng.</p>
-    <a class="primary-button" href="#about">Khám phá chủ đề</a>
-  </section>
-</main>
+<section class="hero">
+    <h2>Khám phá thành phố biển Nha Trang</h2>
+
+```
+<p>
+    Nha Trang nổi tiếng với những bãi biển đẹp,
+    các địa điểm du lịch hấp dẫn và nền ẩm thực đặc sắc.
+</p>
+
+<a href="#gallery" class="btn">Khám phá ngay</a>
+```
+
+</section>
+
+<section id="about">
+    <h2>Giới thiệu</h2>
+
+```
+<p>
+    Website giới thiệu các địa điểm du lịch và món ăn nổi tiếng
+    của thành phố Nha Trang.
+</p>
+```
+
+</section>
+
+<section id="gallery">
+    <h2>Điểm Nổi Bật</h2>
+
+```
+<div class="portfolio-grid">
+
+    <div class="portfolio-item">
+        <img src="../img/bien-nhu-tien-nha-trang.jpg" alt="Biển Nhũ Tiên">
+        <h3>Biển Nhũ Tiên</h3>
+        <p>Bãi biển đẹp với nước trong xanh.</p>
+    </div>
+
+    <div class="portfolio-item">
+        <img src="../img/images.jpg" alt="Ẩm thực Nha Trang">
+        <h3>Ẩm Thực Nha Trang</h3>
+        <p>Những món ăn hấp dẫn và đậm đà hương vị biển.</p>
+    </div>
+
+    <div class="portfolio-item">
+        <img src="../img/nha-trang-main.jpg" alt="Nha Trang">
+        <h3>Thành Phố Nha Trang</h3>
+        <p>Điểm đến du lịch nổi tiếng của Việt Nam.</p>
+    </div>
+
+    <div class="portfolio-item">
+        <img src="../img/quan-oc-nha-trang-01-6699-16463.jpg" alt="Quán Ốc">
+        <h3>Quán Ốc Nha Trang</h3>
+        <p>Địa điểm thưởng thức hải sản tươi ngon.</p>
+    </div>
+
+</div>
+```
+
+</section>
+
+<section id="contact">
+    <h2>Liên hệ</h2>
+    <p>Email: example@gmail.com</p>
+</section>
+
+<footer>
+    <p>&copy; 2026 MyWeb</p>
+</footer>
+
 </body>
 </html>
