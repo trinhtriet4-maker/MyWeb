@@ -1,13 +1,11 @@
-/* =========================
-   ROOT VARIABLES
-========================= */
+/* ================= ROOT ================= */
 :root {
     --primary: #0284C7;
     --accent: #F97316;
     --background: #F0F9FF;
 }
 
-/* RESET */
+/* ================= RESET ================= */
 * {
     margin: 0;
     padding: 0;
@@ -17,17 +15,17 @@
 body {
     font-family: Arial, sans-serif;
     background-color: var(--background);
-    line-height: 1.6;
     color: #1F2937;
+    line-height: 1.6;
 }
 
-/* HEADER */
+/* ================= HEADER (FLEXBOX) ================= */
 .site-header {
-    background-color: var(--primary);
-    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: var(--primary);
+    padding: 15px 20px;
 }
 
 .brand {
@@ -42,13 +40,15 @@ body {
     margin-left: 15px;
 }
 
-/* =========================
-   HERO (linear-gradient)
-========================= */
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+/* ================= HERO ================= */
 .hero {
     text-align: center;
     padding: 40px 20px;
-    background: linear-gradient(135deg, #0284C7, #38BDF8); /* ✅ REQUIRED */
+    background: linear-gradient(135deg, #0284C7, #38BDF8);
 }
 
 .hero img {
@@ -58,59 +58,38 @@ body {
     margin-bottom: 15px;
 }
 
-/* #main-title (REQUIRED) */
 #main-title {
     font-size: 32px;
     color: white;
-    margin: 10px 0;
 }
 
 .lead {
     color: white;
     max-width: 600px;
-    margin: auto;
+    margin: 10px auto;
 }
 
-/* BUTTON */
+/* ================= BUTTON ================= */
 .primary-button {
     display: inline-block;
-    padding: 10px 20px;
     background-color: var(--accent);
     color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
     text-decoration: none;
-    border-radius: 8px;
-    margin-top: 10px;
 }
 
-/* =========================
-   CARD GRID
-========================= */
-.card-row,
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+.primary-button:hover {
+    opacity: 0.9;
+}
+
+/* ================= ABOUT ================= */
+.about {
     padding: 20px;
+    text-align: center;
 }
 
-/* CARD STYLE */
-.feature-card,
-.portfolio-grid figure {
-    background: white;
-    padding: 15px;
-    border-radius: 12px;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-/* IMAGE */
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-/* BLOCKQUOTE */
+/* ================= BLOCKQUOTE ================= */
 blockquote {
     border-left: 5px solid var(--primary);
     padding: 10px 15px;
@@ -119,29 +98,36 @@ blockquote {
     background: white;
 }
 
-/* CONTENT LAYOUT */
-.content-layout {
+/* ================= GRID PORTFOLIO ================= */
+.portfolio-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
 }
 
-.main-content,
-.side-panel {
+/* CARD STYLE */
+.gallery-item {
     background: white;
-    padding: 20px;
     border-radius: 12px;
+    padding: 15px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* CONTACT */
+/* IMAGE */
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* ================= CONTACT FORM ================= */
 .contact-form {
-    max-width: 500px;
-    margin: auto;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    max-width: 500px;
+    margin: 20px auto;
 }
 
 .contact-form input,
@@ -151,7 +137,7 @@ blockquote {
     border-radius: 6px;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 footer {
     text-align: center;
     padding: 20px;
@@ -159,15 +145,14 @@ footer {
     color: white;
 }
 
-/* RESPONSIVE */
+/* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
-
-    .card-row,
     .portfolio-grid {
         grid-template-columns: 1fr;
     }
 
-    .content-layout {
-        grid-template-columns: 1fr;
+    .site-header {
+        flex-direction: column;
+        gap: 10px;
     }
 }
