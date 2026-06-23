@@ -1,158 +1,20 @@
-/* ================= ROOT ================= */
-:root {
-    --primary: #0284C7;
-    --accent: #F97316;
-    --background: #F0F9FF;
+.hidden{
+    display:none;
 }
 
-/* ================= RESET ================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.dark-mode{
+    background:#111827;
+    color:white;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: var(--background);
-    color: #1F2937;
-    line-height: 1.6;
+.warm-mode{
+    background:#fff7ed;
 }
 
-/* ================= HEADER (FLEXBOX) ================= */
-.site-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--primary);
-    padding: 15px 20px;
+.menu-toggle{
+    cursor:pointer;
 }
 
-.brand {
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.main-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 15px;
-}
-
-.main-nav a:hover {
-    text-decoration: underline;
-}
-
-/* ================= HERO ================= */
-.hero {
-    text-align: center;
-    padding: 40px 20px;
-    background: linear-gradient(135deg, #0284C7, #38BDF8);
-}
-
-.hero img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-#main-title {
-    font-size: 32px;
-    color: white;
-}
-
-.lead {
-    color: white;
-    max-width: 600px;
-    margin: 10px auto;
-}
-
-/* ================= BUTTON ================= */
-.primary-button {
-    display: inline-block;
-    background-color: var(--accent);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-}
-
-.primary-button:hover {
-    opacity: 0.9;
-}
-
-/* ================= ABOUT ================= */
-.about {
-    padding: 20px;
-    text-align: center;
-}
-
-/* ================= BLOCKQUOTE ================= */
-blockquote {
-    border-left: 5px solid var(--primary);
-    padding: 10px 15px;
-    margin: 20px;
-    font-style: italic;
-    background: white;
-}
-
-/* ================= GRID PORTFOLIO ================= */
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
-}
-
-/* CARD STYLE */
-.gallery-item {
-    background: white;
-    border-radius: 12px;
-    padding: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-/* IMAGE */
-.gallery-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-/* ================= CONTACT FORM ================= */
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 500px;
-    margin: 20px auto;
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-}
-
-/* ================= FOOTER ================= */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: var(--primary);
-    color: white;
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .site-header {
-        flex-direction: column;
-        gap: 10px;
-    }
+.main-nav.active{
+    display:block;
 }
