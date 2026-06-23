@@ -3,11 +3,7 @@ let topic = "Du lịch Nha Trang";
 let imageCount = 3;
 let isReady = true;
 
-console.log("Website:", siteName);
-console.log("Chủ đề:", topic);
-console.log("Số ảnh:", imageCount);
-console.log("Đã sẵn sàng dùng JS?", isReady);
-console.log("Kiểu dữ liệu topic:", typeof topic);
+console.log(siteName, topic, imageCount, isReady);
 
 const mainTitle = document.getElementById("mainTitle");
 const welcomeText = document.getElementById("welcomeText");
@@ -15,7 +11,7 @@ const welcomeText = document.getElementById("welcomeText");
 if (mainTitle && welcomeText) {
     mainTitle.textContent = "Khám Phá Nha Trang Cùng MyWeb";
     welcomeText.textContent =
-        "Website đã được nâng cấp với JavaScript để tăng tính tương tác.";
+        "Website đã được nâng cấp với JavaScript.";
 }
 
 const helloBtn = document.getElementById("helloBtn");
@@ -24,7 +20,7 @@ const helloResult = document.getElementById("helloResult");
 if (helloBtn && helloResult) {
     helloBtn.addEventListener("click", function () {
         helloResult.textContent =
-            "Xin chào! Cảm ơn bạn đã ghé thăm website Du Lịch Nha Trang.";
+            "Xin chào! Cảm ơn bạn đã ghé thăm website.";
     });
 }
 
@@ -43,12 +39,6 @@ const mainMenu = document.getElementById("mainMenu");
 if (menuToggle && mainMenu) {
     menuToggle.addEventListener("click", function () {
         mainMenu.classList.toggle("active");
-
-        if (mainMenu.classList.contains("active")) {
-            menuToggle.textContent = "✖ Đóng Menu";
-        } else {
-            menuToggle.textContent = "☰ Menu";
-        }
     });
 }
 
@@ -56,6 +46,7 @@ const themeSelect = document.getElementById("themeSelect");
 
 if (themeSelect) {
     themeSelect.addEventListener("change", function () {
+
         document.body.classList.remove(
             "dark-mode",
             "warm-mode"
@@ -70,23 +61,20 @@ if (themeSelect) {
 const searchInput = document.getElementById("searchInput");
 const searchItems = document.querySelectorAll(".search-item");
 
-if (searchInput && searchItems.length > 0) {
+if (searchInput) {
+
     searchInput.addEventListener("keyup", function () {
 
         const keyword =
-            searchInput.value.toLowerCase().trim();
+            searchInput.value.toLowerCase();
 
         searchItems.forEach(function (item) {
 
             const text =
                 item.textContent.toLowerCase();
 
-            if (text.includes(keyword)) {
-                item.style.display = "";
-            } else {
-                item.style.display = "none";
-            }
-
+            item.style.display =
+                text.includes(keyword) ? "" : "none";
         });
     });
 }
@@ -108,19 +96,13 @@ filterButtons.forEach(function (button) {
             const category =
                 item.dataset.category;
 
-            if (
+            item.style.display =
                 filter === "all" ||
-                category === filter
-            ) {
-                item.style.display = "";
-            } else {
-                item.style.display = "none";
-            }
-
+                filter === category
+                    ? ""
+                    : "none";
         });
-
     });
-
 });
 
 const contactForm =
@@ -135,12 +117,7 @@ const email =
 const formMessage =
     document.getElementById("formMessage");
 
-if (
-    contactForm &&
-    fullName &&
-    email &&
-    formMessage
-) {
+if (contactForm) {
 
     contactForm.addEventListener(
         "submit",
@@ -148,46 +125,23 @@ if (
 
             event.preventDefault();
 
-            const nameValue =
-                fullName.value.trim();
-
-            const emailValue =
-                email.value.trim();
-
-            if (nameValue === "") {
-
+            if (fullName.value.trim() === "") {
                 formMessage.textContent =
                     "Vui lòng nhập họ tên.";
-
-                formMessage.style.color =
-                    "red";
-
                 return;
             }
 
             if (
-                emailValue === "" ||
-                !emailValue.includes("@")
+                email.value.trim() === "" ||
+                !email.value.includes("@")
             ) {
-
                 formMessage.textContent =
-                    "Vui lòng nhập email hợp lệ.";
-
-                formMessage.style.color =
-                    "red";
-
+                    "Email không hợp lệ.";
                 return;
             }
 
             formMessage.textContent =
-                "Thông tin hợp lệ. Cảm ơn bạn đã liên hệ!";
-
-            formMessage.style.color =
-                "green";
-
-            contactForm.reset();
-
+                "Gửi liên hệ thành công!";
         }
     );
-
 }
