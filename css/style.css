@@ -1,3 +1,155 @@
+:root{
+    --primary:#0284C7;
+    --accent:#F97316;
+    --background:#F0F9FF;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background-color:var(--background);
+    color:#1F2937;
+    line-height:1.6;
+}
+
+/* Header */
+
+.site-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background-color:var(--primary);
+    padding:15px 20px;
+}
+
+.brand{
+    color:white;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.main-nav{
+    display:flex;
+    gap:15px;
+}
+
+.main-nav a{
+    color:white;
+    text-decoration:none;
+}
+
+.main-nav a:hover{
+    text-decoration:underline;
+}
+
+/* Hero */
+
+.hero{
+    text-align:center;
+    padding:40px 20px;
+    background:linear-gradient(135deg,#0284C7,#38BDF8);
+}
+
+.hero img{
+    width:100%;
+    max-width:1200px;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+#mainTitle{
+    font-size:32px;
+    color:white;
+}
+
+.lead{
+    color:white;
+    max-width:700px;
+    margin:10px auto;
+}
+
+/* Button */
+
+.primary-button{
+    display:inline-block;
+    background-color:var(--accent);
+    color:white;
+    padding:10px 20px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    text-decoration:none;
+}
+
+.primary-button:hover{
+    opacity:.9;
+}
+
+/* Sections */
+
+section{
+    padding:30px 20px;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:var(--primary);
+}
+
+.about{
+    text-align:center;
+}
+
+/* Theme */
+
+.theme-section,
+.search-section{
+    text-align:center;
+}
+
+#themeSelect{
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+#searchInput{
+    width:80%;
+    max-width:500px;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+/* Filter */
+
+.filter-buttons{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.filter-btn{
+    background-color:var(--primary);
+    color:white;
+    border:none;
+    padding:10px 15px;
+    margin:5px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.filter-btn:hover{
+    opacity:.9;
+}
+
+/* Portfolio */
+
 .portfolio-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -5,8 +157,48 @@
 }
 
 .gallery-item{
+    background:white;
+    padding:15px;
+    border-radius:12px;
     box-shadow:0 4px 12px rgba(0,0,0,.1);
 }
+
+.gallery-item img{
+    width:100%;
+    border-radius:8px;
+}
+
+.gallery-item figcaption{
+    margin-top:10px;
+    text-align:center;
+    font-weight:bold;
+}
+
+/* Form */
+
+.contact-form{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    max-width:500px;
+    margin:auto;
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+#helloResult,
+#formMessage{
+    margin-top:10px;
+    text-align:center;
+    font-weight:bold;
+}
+
+/* JS Classes */
 
 .hidden{
     display:none;
@@ -17,21 +209,73 @@
     color:white;
 }
 
+.dark-mode .gallery-item{
+    background:#1F2937;
+    color:white;
+}
+
+.dark-mode input,
+.dark-mode textarea,
+.dark-mode select{
+    background:#1F2937;
+    color:white;
+    border-color:#374151;
+}
+
 .warm-mode{
     background:#FFF7ED;
 }
 
+/* Menu Button */
+
+.menu-toggle{
+    display:none;
+    background:var(--accent);
+    color:white;
+    border:none;
+    padding:10px 15px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:20px;
+    background-color:var(--primary);
+    color:white;
+}
+
+/* Responsive */
+
 @media(max-width:768px){
+
+    .site-header{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .main-nav{
+        display:none;
+        flex-direction:column;
+        width:100%;
+        text-align:center;
+    }
+
+    .main-nav.active{
+        display:flex;
+    }
 
     .portfolio-grid{
         grid-template-columns:1fr;
     }
 
-    .main-nav{
-        display:none;
-    }
-
-    .main-nav.active{
-        display:flex;
+    #searchInput{
+        width:95%;
     }
 }
