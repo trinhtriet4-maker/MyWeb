@@ -1,66 +1,218 @@
-<h1 id="mainTitle">Khám Phá Nha Trang</h1>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyWeb - Du Lịch Nha Trang</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
 
-<p id="welcomeText">
-    Thành phố biển nổi tiếng với du lịch, ẩm thực và cảnh đẹp thiên nhiên.
-</p>
+<header class="site-header">
 
-<button id="helloBtn" class="primary-button">
-    Nhấn để xem lời chào
-</button>
+    <div class="brand">MyWeb</div>
 
-<p id="helloResult"></p>
+    <button id="menuToggle" class="menu-toggle">
+        ☰ Menu
+    </button>
 
-<button id="toggleAboutBtn" class="primary-button">
-    Ẩn / Hiện Nội Dung
-</button>
+    <nav id="mainMenu" class="main-nav">
+        <a href="#about">Giới thiệu</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Liên hệ</a>
+    </nav>
 
-<div id="aboutContent">
-    ...
-</div>
+</header>
 
-<button id="menuToggle" class="menu-toggle">
-    ☰ Menu
-</button>
+<main>
 
-<nav id="mainMenu">
-    ...
-</nav>
+    <section class="hero">
 
-<select id="themeSelect">
-    <option value="">Giao diện mặc định</option>
-    <option value="dark-mode">Nền tối</option>
-    <option value="warm-mode">Nền ấm</option>
-</select>
+        <img src="../img/hero.jpg" alt="Du lịch Nha Trang">
 
-<input
-    type="text"
-    id="searchInput"
-    placeholder="Nhập từ khóa..."
->
+        <h1 id="mainTitle">Khám Phá Nha Trang</h1>
 
-<button class="filter-btn" data-filter="all">Tất cả</button>
-<button class="filter-btn" data-filter="travel">Du lịch</button>
-<button class="filter-btn" data-filter="food">Ẩm thực</button>
+        <p id="welcomeText" class="lead">
+            Thành phố biển nổi tiếng với du lịch, ẩm thực và cảnh đẹp thiên nhiên.
+        </p>
 
-<figure
-    class="gallery-item search-item"
-    data-category="travel">
-</figure>
+        <a href="#portfolio" class="primary-button">
+            Khám phá ngay
+        </a>
 
-<form id="contactForm">
+        <br><br>
 
-    <input
-        type="text"
-        id="fullName"
-        placeholder="Họ và tên"
-    >
+        <button id="helloBtn" class="primary-button">
+            Nhấn để xem lời chào
+        </button>
 
-    <input
-        type="email"
-        id="email"
-        placeholder="Email"
-    >
+        <p id="helloResult"></p>
 
-    <p id="formMessage"></p>
+    </section>
 
-</form>
+    <section id="about" class="about">
+
+        <h2>Giới Thiệu</h2>
+
+        <button id="toggleAboutBtn" class="primary-button">
+            Ẩn / Hiện Nội Dung
+        </button>
+
+        <div id="aboutContent">
+
+            <p>
+                Nha Trang là thành phố biển nổi tiếng của Việt Nam,
+                được biết đến với những bãi biển đẹp, khí hậu ôn hòa,
+                nhiều điểm tham quan hấp dẫn và nền ẩm thực phong phú.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="theme-section">
+
+        <h2>Chọn Giao Diện</h2>
+
+        <select id="themeSelect">
+            <option value="">Giao diện mặc định</option>
+            <option value="dark-mode">Nền tối</option>
+            <option value="warm-mode">Nền ấm</option>
+        </select>
+
+    </section>
+
+    <section class="search-section">
+
+        <h2>Tìm Kiếm Nội Dung</h2>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Nhập từ khóa..."
+        >
+
+    </section>
+
+    <section id="portfolio">
+
+        <h2>Portfolio</h2>
+
+        <div class="filter-buttons">
+
+            <button class="filter-btn" data-filter="all">
+                Tất cả
+            </button>
+
+            <button class="filter-btn" data-filter="travel">
+                Du lịch
+            </button>
+
+            <button class="filter-btn" data-filter="food">
+                Ẩm thực
+            </button>
+
+            <button class="filter-btn" data-filter="culture">
+                Văn hóa
+            </button>
+
+        </div>
+
+        <div class="portfolio-grid">
+
+            <figure
+                class="gallery-item search-item"
+                data-category="travel">
+
+                <img
+                    src="../img/detail-1.jpg"
+                    alt="Trung tâm thành phố">
+
+                <figcaption>
+                    Trung tâm thành phố Nha Trang
+                </figcaption>
+
+            </figure>
+
+            <figure
+                class="gallery-item search-item"
+                data-category="food">
+
+                <img
+                    src="../img/am-thuc.jpg"
+                    alt="Ẩm thực">
+
+                <figcaption>
+                    Ẩm thực Nha Trang
+                </figcaption>
+
+            </figure>
+
+            <figure
+                class="gallery-item search-item"
+                data-category="culture">
+
+                <img
+                    src="../img/nha-tho.jpg"
+                    alt="Nhà thờ Đá">
+
+                <figcaption>
+                    Nhà thờ Đá Nha Trang
+                </figcaption>
+
+            </figure>
+
+        </div>
+
+    </section>
+
+    <section id="contact">
+
+        <h2>Liên Hệ</h2>
+
+        <form id="contactForm" class="contact-form">
+
+            <input
+                type="text"
+                id="fullName"
+                placeholder="Họ và tên"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Email"
+                required
+            >
+
+            <textarea
+                rows="5"
+                placeholder="Nội dung liên hệ"
+                required>
+            </textarea>
+
+            <button
+                type="submit"
+                class="primary-button">
+
+                Gửi Liên Hệ
+
+            </button>
+
+            <p id="formMessage"></p>
+
+        </form>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 MyWeb - Du Lịch Nha Trang</p>
+</footer>
+
+<script src="../js/script.js"></script>
+
+</body>
+</html>
