@@ -12,8 +12,9 @@
 
     <div class="brand">MyWeb</div>
 
-    <!-- Bài 05 -->
-    <button id="menuToggle" class="menu-toggle">☰ Menu</button>
+    <button id="menuToggle" class="menu-toggle">
+        ☰ Menu
+    </button>
 
     <nav id="mainMenu" class="main-nav">
         <a href="#about">Giới thiệu</a>
@@ -25,15 +26,12 @@
 
 <main>
 
-    <!-- HERO -->
     <section class="hero">
 
         <img src="../img/hero.jpg" alt="Nha Trang">
 
-        <!-- Bài 02 -->
         <h1 id="mainTitle">Khám Phá Nha Trang</h1>
 
-        <!-- Bài 02 -->
         <p id="welcomeText" class="lead">
             Thành phố biển nổi tiếng với du lịch, ẩm thực và cảnh đẹp thiên nhiên.
         </p>
@@ -42,7 +40,8 @@
             Khám phá ngay
         </a>
 
-        <!-- Bài 03 -->
+        <br><br>
+
         <button id="helloBtn" class="primary-button">
             Nhấn để xem lời chào
         </button>
@@ -51,32 +50,29 @@
 
     </section>
 
-    <!-- ABOUT -->
     <section id="about" class="about">
 
         <h2>Giới Thiệu</h2>
 
-        <!-- Bài 04 -->
         <button id="toggleAboutBtn" class="primary-button">
-            Ẩn / Hiện nội dung
+            Ẩn / Hiện Nội Dung
         </button>
 
         <div id="aboutContent">
 
             <p>
-                Nha Trang là thành phố biển nổi tiếng với cảnh đẹp thiên nhiên,
-                các bãi biển trong xanh, khu vui chơi giải trí hiện đại và nền
-                ẩm thực đặc sắc thu hút hàng triệu du khách mỗi năm.
+                Nha Trang là thành phố biển nổi tiếng của Việt Nam,
+                thu hút du khách bởi bãi biển xanh trong, khí hậu ôn hòa,
+                nhiều địa điểm tham quan hấp dẫn và nền ẩm thực đặc sắc.
             </p>
 
         </div>
 
     </section>
 
-    <!-- Bài 06 -->
     <section class="theme-section">
 
-        <h2>Tùy Chọn Giao Diện</h2>
+        <h2>Chọn Giao Diện</h2>
 
         <select id="themeSelect">
             <option value="">Giao diện mặc định</option>
@@ -86,121 +82,62 @@
 
     </section>
 
-    <!-- Bài 07 -->
     <section class="search-section">
 
-        <h2>Tìm Kiếm Nhanh</h2>
+        <h2>Tìm Kiếm Nội Dung</h2>
 
-        <input
-            type="text"
-            id="searchInput"
-            placeholder="Nhập từ khóa..."
-        >
+        <input type="text" id="searchInput" placeholder="Nhập từ khóa...">
 
     </section>
 
-    <!-- PORTFOLIO -->
     <section id="portfolio">
 
         <h2>Portfolio</h2>
 
-        <!-- Bài 08 -->
         <div class="filter-buttons">
 
-            <button class="filter-btn" data-filter="all">
-                Tất cả
-            </button>
-
-            <button class="filter-btn" data-filter="travel">
-                Du lịch
-            </button>
-
-            <button class="filter-btn" data-filter="food">
-                Ẩm thực
-            </button>
-
-            <button class="filter-btn" data-filter="culture">
-                Văn hóa
-            </button>
+            <button class="filter-btn" data-filter="all">Tất cả</button>
+            <button class="filter-btn" data-filter="travel">Du lịch</button>
+            <button class="filter-btn" data-filter="food">Ẩm thực</button>
+            <button class="filter-btn" data-filter="culture">Văn hóa</button>
 
         </div>
 
         <div class="portfolio-grid">
 
-            <figure
-                class="gallery-item search-item"
-                data-category="travel">
-
-                <img src="../img/detail-1.jpg" alt="">
-
-                <figcaption>
-                    Trung tâm thành phố
-                </figcaption>
-
+            <figure class="gallery-item search-item" data-category="travel">
+                <img src="../img/detail-1.jpg" alt="Trung tâm thành phố">
+                <figcaption>Trung tâm thành phố Nha Trang</figcaption>
             </figure>
 
-            <figure
-                class="gallery-item search-item"
-                data-category="food">
-
-                <img src="../img/am-thuc.jpg" alt="">
-
-                <figcaption>
-                    Ẩm thực Nha Trang
-                </figcaption>
-
+            <figure class="gallery-item search-item" data-category="food">
+                <img src="../img/am-thuc.jpg" alt="Ẩm thực">
+                <figcaption>Ẩm thực Nha Trang</figcaption>
             </figure>
 
-            <figure
-                class="gallery-item search-item"
-                data-category="culture">
-
-                <img src="../img/nha-tho.jpg" alt="">
-
-                <figcaption>
-                    Nhà thờ Đá
-                </figcaption>
-
+            <figure class="gallery-item search-item" data-category="culture">
+                <img src="../img/nha-tho.jpg" alt="Nhà thờ Đá">
+                <figcaption>Nhà thờ Đá Nha Trang</figcaption>
             </figure>
 
         </div>
 
     </section>
 
-    <!-- CONTACT -->
     <section id="contact">
 
         <h2>Liên Hệ</h2>
 
-        <!-- Bài 09 -->
         <form id="contactForm" class="contact-form">
 
-            <input
-                type="text"
-                id="fullName"
-                placeholder="Họ tên"
-                required
-            >
+            <input type="text" id="fullName" placeholder="Họ và tên" required>
 
-            <input
-                type="email"
-                id="email"
-                placeholder="Email"
-                required
-            >
+            <input type="email" id="email" placeholder="Email" required>
 
-            <textarea
-                rows="4"
-                placeholder="Nội dung"
-                required>
-            </textarea>
+            <textarea rows="5" placeholder="Nội dung liên hệ" required></textarea>
 
-            <button
-                type="submit"
-                class="primary-button">
-
-                Gửi liên hệ
-
+            <button type="submit" class="primary-button">
+                Gửi Liên Hệ
             </button>
 
             <p id="formMessage"></p>
@@ -215,7 +152,6 @@
     <p>© 2026 MyWeb - Du Lịch Nha Trang</p>
 </footer>
 
-<!-- Bài 00 -->
 <script src="../js/script.js"></script>
 
 </body>
